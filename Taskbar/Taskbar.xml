@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ur:Remote xmlns:ur="http://unifiedremote.com/schemas/remote.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://unifiedremote.com/schemas/remote.xsd http://unifiedremote.com/schemas/remote.xsd"
+	Name="Taskbar" Author="Josh Slauson"
+	Description="Windows taskbar shortcuts.">
+	<Actions>
+		<Action Name="open_program">
+			<!-- Get corresponding key for list index -->
+			<ActionRef Name="join" Target="Util">
+				<Extra>VK_</Extra>
+				<Extra>$Item</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LWIN</Extra>
+				<Extra>$res</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="open_jumplist">
+			<!-- Get corresponding key for list index -->
+			<ActionRef Name="join" Target="Util">
+				<Extra>VK_</Extra>
+				<Extra>$Item</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LWIN</Extra>
+				<Extra>MENU</Extra>
+				<Extra>$res</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="up">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>UP</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="down">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>DOWN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="enter">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="escape">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>ESCAPE</Extra>
+			</ActionRef>
+		</Action>
+	</Actions>
+
+	<Layout scroll="none">
+		<Row>
+			<Control Type="List" OnItem="open_program" Align="Left" Width="fill" Text="Open program">
+				<Item>0</Item>
+				<Item>1</Item>
+				<Item>2</Item>
+				<Item>3</Item>
+				<Item>4</Item>
+				<Item>5</Item>
+				<Item>6</Item>
+				<Item>7</Item>
+				<Item>8</Item>
+				<Item>9</Item>
+			</Control>
+		</Row>
+		<Row>
+			<Control Type="List" OnItem="open_jumplist" Align="Left" Width="fill" Text="Open jumplist">
+				<Item>0</Item>
+				<Item>1</Item>
+				<Item>2</Item>
+				<Item>3</Item>
+				<Item>4</Item>
+				<Item>5</Item>
+				<Item>6</Item>
+				<Item>7</Item>
+				<Item>8</Item>
+				<Item>9</Item>
+			</Control>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="up" Align="Left" Width="fill" Text="Up"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="down" Align="Left" Width="fill" Text="Down"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="enter" Align="Left" Width="fill" Text="Enter"/>
+		</Row>
+		<Row>
+			<Control Type="Escape" OnClick="enter" Align="Left" Width="fill" Text="Escape"/>
+		</Row>
+	</Layout>
+</ur:Remote>
