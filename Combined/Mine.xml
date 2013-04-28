@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ur:Remote xmlns:ur="http://unifiedremote.com/schemas/remote.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://unifiedremote.com/schemas/remote.xsd http://unifiedremote.com/schemas/remote.xsd"
+	Name="Mine" Author="Josh Slauson"
+	Description="Various actions.">
+	<Actions>
+
+		<!-- Display actions -->
+	
+		<Action Name="computer_only">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LWIN</Extra>
+				<Extra>VK_P</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>HOME</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="duplicate">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LWIN</Extra>
+				<Extra>VK_P</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>HOME</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RIGHT</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="extend">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LWIN</Extra>
+				<Extra>VK_P</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>END</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LEFT</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="projector_only">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LWIN</Extra>
+				<Extra>VK_P</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>END</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+		
+		<!-- Music actions -->
+		
+		<Action Name="media_play_pause">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>MEDIA_PLAY_PAUSE</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="media_stop">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>MEDIA_PLAY_STOP</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="media_prev">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>MEDIA_PREV</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="media_next">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>MEDIA_NEXT</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="volume_up">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>VOLUME_UP</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="volume_down">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>VOLUME_DOWN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="volume_mute">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>VOLUME_MUTE</Extra>
+			</ActionRef>
+		</Action>
+		
+		<!-- Taskbar actions -->
+		
+		<Action Name="open_program">
+			<!-- Get corresponding key for list index -->
+			<ActionRef Name="join" Target="Util">
+				<Extra>VK_</Extra>
+				<Extra>$Item</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LWIN</Extra>
+				<Extra>$res</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="open_jumplist">
+			<!-- Get corresponding key for list index -->
+			<ActionRef Name="join" Target="Util">
+				<Extra>VK_</Extra>
+				<Extra>$Item</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>LWIN</Extra>
+				<Extra>MENU</Extra>
+				<Extra>$res</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="up">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>UP</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="down">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>DOWN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="enter">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="escape">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>ESCAPE</Extra>
+			</ActionRef>
+		</Action>
+		
+		<!-- Web Actions -->
+		<Action Name="hulu_queue">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>CONTROL</Extra>
+				<Extra>L</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="text" Target="Input">
+				<Extra>http://www.hulu.com/profile/queue</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="amazon_watchlist">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>CONTROL</Extra>
+				<Extra>L</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="text" Target="Input">
+				<Extra>https://www.amazon.com/gp/video/watchlist/tv</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+	</Actions>
+
+	<Layout>
+		<!-- Display actions -->
+		<Row>
+			<Control Type="Label" Text="Displays"/>
+			<Control Type="Button" OnClick="computer_only" Align="Left" Text="C"/>
+			<Control Type="Button" OnClick="duplicate" Align="Left" Text="D"/>
+			<Control Type="Button" OnClick="extend" Align="Left" Text="E"/>
+			<Control Type="Button" OnClick="projector_only" Align="Left" Text="P"/>
+		</Row>
+		
+		<!-- Music actions -->
+		<Row>
+			<Control Type="Label" Text="Music"/>
+			<Control Type="Button" OnClick="media_stop" Align="Left" Text="o"/>
+			<Control Type="Button" OnClick="media_play_pause" Align="Left" Text=">"/>
+			<Control Type="Button" OnClick="media_next" Align="Left" Text=">>"/>
+		</Row>
+		
+		<!-- Audio actions -->
+		<Row>
+			<Control Type="Label" Text="Audio"/>
+			<Control Type="Button" OnClick="volume_down" Align="Left" Text="-"/>
+			<Control Type="Button" OnClick="volume_up" Align="Left" Text="+"/>
+			<Control Type="Button" OnClick="volume_mute" Align="Left" Text="="/>
+		</Row>
+		
+		<!-- Taskbar actions -->
+		<Row>
+			<Control Type="Label" Text="Program"/>
+			<Control Type="List" OnItem="open_program" Align="Left" Text="Program">
+				<Item>0</Item>
+				<Item>1</Item>
+				<Item>2</Item>
+				<Item>3</Item>
+				<Item>4</Item>
+				<Item>5</Item>
+				<Item>6</Item>
+				<Item>7</Item>
+				<Item>8</Item>
+				<Item>9</Item>
+			</Control>
+			<Control Type="Label" Text="Jumplist"/>
+			<Control Type="List" OnItem="open_jumplist" Align="Left" Text="Jumplist">
+				<Item>0</Item>
+				<Item>1</Item>
+				<Item>2</Item>
+				<Item>3</Item>
+				<Item>4</Item>
+				<Item>5</Item>
+				<Item>6</Item>
+				<Item>7</Item>
+				<Item>8</Item>
+				<Item>9</Item>
+			</Control>
+		</Row>
+		
+		<!-- Jumplist control actions -->
+		<Row>
+			<Control Type="Button" OnClick="up" Align="Left" Text="Up"/>
+			<Control Type="Button" OnClick="down" Align="Left" Text="Down"/>
+			<Control Type="Button" OnClick="enter" Align="Left" Text="X"/>
+			<Control Type="Button" OnClick="enter" Align="Left" Text="O"/>
+		</Row>
+		
+		<!-- Web actions -->
+		<Row>
+			<Control Type="Button" OnClick="hulu_queue" Align="Left" Text="Hulu queue"/>
+			<Control Type="Button" OnClick="amazon_watchlist" Align="Right" Text="Amazon watchlist"/>
+		</Row>
+
+	</Layout>
+</ur:Remote>
