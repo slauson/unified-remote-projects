@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ur:Remote xmlns:ur="http://unifiedremote.com/schemas/remote.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://unifiedremote.com/schemas/remote.xsd http://unifiedremote.com/schemas/remote.xsd"
+	Name="Music" Author="Josh Slauson"
+	Description="Music Management.">
+	<Actions>
+		<Action Name="media_play_pause">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>MEDIA_PLAY_PAUSE</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="media_stop">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>MEDIA_PLAY_STOP</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="media_prev">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>MEDIA_PREV</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="media_next">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>MEDIA_NEXT</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="volume_up">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>VOLUME_UP</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="volume_down">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>VOLUME_DOWN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="volume_mute">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>VOLUME_MUTE</Extra>
+			</ActionRef>
+		</Action>
+	</Actions>
+
+	<Layout>
+		<Row>
+			<Control Type="Button" OnClick="media_play_pause" Align="Left" Width="fill" Text="Play/pause"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="media_stop" Align="Left" Width="fill" Text="Stop"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="media_prev" Align="Left" Width="fill" Text="Prev"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="media_next" Align="Left" Width="fill" Text="Next"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="volume_up" Align="Left" Width="fill" Text="Volume up"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="volume_down" Align="Left" Width="fill" Text="Volume down"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="volume_mute" Align="Left" Width="fill" Text="Volume mute"/>
+		</Row>
+		
+		<Row>
+			<Control Type="List">
+				<Item>Item 1</Item>
+				<Item>Item 2</Item>
+				<Item>Item 3</Item>
+			</Control>
+		</Row>
+		
+	</Layout>
+</ur:Remote>
