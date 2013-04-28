@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ur:Remote xmlns:ur="http://unifiedremote.com/schemas/remote.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://unifiedremote.com/schemas/remote.xsd http://unifiedremote.com/schemas/remote.xsd"
+	Name="Web" Author="Josh Slauson"
+	Description="Web Bookmarks.">
+	<Actions>
+		<Action Name="hulu_queue">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>CONTROL</Extra>
+				<Extra>VK_L</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="text" Target="Input">
+				<Extra>http://www.hulu.com/profile/queue</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+		<Action Name="amazon_watchlist">
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>CONTROL</Extra>
+				<Extra>VK_L</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="text" Target="Input">
+				<Extra>https://www.amazon.com/gp/video/watchlist/tv</Extra>
+			</ActionRef>
+			<ActionRef Name="pause" Target="Util">
+				<Extra>500</Extra>
+			</ActionRef>
+			<ActionRef Name="stroke" Target="Input">
+				<Extra>RETURN</Extra>
+			</ActionRef>
+		</Action>
+	</Actions>
+
+	<Layout>
+		<Row>
+			<Control Type="Button" OnClick="hulu_queue" Align="Left" Width="fill" Text="Hulu queue"/>
+		</Row>
+		<Row>
+			<Control Type="Button" OnClick="amazon_watchlist" Align="Left" Width="fill" Text="Amazon watchlist"/>
+		</Row>
+	</Layout>
+</ur:Remote>
