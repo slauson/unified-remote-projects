@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://unifiedremote.com/schemas/remote.xsd http://unifiedremote.com/schemas/remote.xsd"
 	Name="Mine" Author="Josh Slauson"
+	Icon="face-cool.png"
 	Description="Various actions.">
 	<Actions>
 
@@ -229,17 +230,18 @@
 		<!-- Music actions -->
 		<Row>
 			<Control Type="Label" Text="Music"/>
-			<Control Type="Button" OnClick="media_stop" Align="Left" Text="o"/>
-			<Control Type="Button" OnClick="media_play_pause" Align="Left" Text=">"/>
-			<Control Type="Button" OnClick="media_next" Align="Left" Text=">>"/>
+			<Control Type="Button" OnClick="media_prev" Align="Left" Icon="PREVIOUS"/>
+			<Control Type="Button" OnClick="media_stop" Align="Left" Icon="STOP"/>
+			<Control Type="Button" OnClick="media_play_pause" Align="Left" Icon="PLAY"/>
+			<Control Type="Button" OnClick="media_next" Align="Left" Icon="NEXT"/>
 		</Row>
 		
 		<!-- Audio actions -->
 		<Row>
 			<Control Type="Label" Text="Audio"/>
-			<Control Type="Button" OnClick="volume_down" Align="Left" Text="-"/>
-			<Control Type="Button" OnClick="volume_up" Align="Left" Text="+"/>
-			<Control Type="Button" OnClick="volume_mute" Align="Left" Text="="/>
+			<Control Type="Button" OnClick="volume_down" Align="Left" Icon="VDOWN"/>
+			<Control Type="Button" OnClick="volume_up" Align="Left" Icon="VUP"/>
+			<Control Type="Button" OnClick="volume_mute" Align="Left" Icon="VMUTE"/>
 		</Row>
 		
 		<!-- Taskbar actions -->
@@ -274,10 +276,10 @@
 		
 		<!-- Jumplist control actions -->
 		<Row>
-			<Control Type="Button" OnClick="up" Align="Left" Text="Up"/>
-			<Control Type="Button" OnClick="down" Align="Left" Text="Down"/>
-			<Control Type="Button" OnClick="enter" Align="Left" Text="X"/>
-			<Control Type="Button" OnClick="enter" Align="Left" Text="O"/>
+			<Control Type="Button" OnClick="up" Align="Left" Icon="Up"/>
+			<Control Type="Button" OnClick="down" Align="Left" Icon="Down"/>
+			<Control Type="Button" OnClick="enter" Align="Left" Icon="SELECT"/>
+			<Control Type="Button" OnClick="escape" Align="Left" Icon="REFRESH"/>
 		</Row>
 		
 		<!-- Web actions -->
