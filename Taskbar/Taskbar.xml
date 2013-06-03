@@ -89,7 +89,7 @@
 			<Control Type="Button" OnClick="enter" Align="Left" Width="fill" Text="Enter"/>
 		</Row>
 		<Row>
-			<Control Type="Escape" OnClick="enter" Align="Left" Width="fill" Text="Escape"/>
+			<Control Type="Escape" OnClick="escape" Align="Left" Width="fill" Text="Escape"/>
 		</Row>
 	</Layout>
 </ur:Remote>
